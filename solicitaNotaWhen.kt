@@ -1,14 +1,10 @@
-import java.util.*
-
 fun main() {
     avaliaResultadoWhen()
 }
 
 fun avaliaResultadoWhen(){
-    val scanner = Scanner(System.`in`)
-
     println("Digite uma nota entre 1 e 5")
-    var nota = scanner.nextInt()
+    var nota = readLine()?.toInt()
 
     when(nota){
         1-> println("Péssimo")
