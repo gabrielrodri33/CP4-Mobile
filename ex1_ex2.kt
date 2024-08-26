@@ -1,5 +1,3 @@
-import java.util.*
-
 fun main() {
     ex1()
     ex2()
@@ -7,13 +5,12 @@ fun main() {
 
 fun ex1() {
     println("-=-=-=-=-=-=-=-=-=-=-=-=Exercício 1-=-=-=-=-=-=-=-=-=-=-=-=")
-    val scanner = Scanner(System.`in`)
   
     println("Valor do produto: ")
-    var valorProduto = scanner.nextDouble()
+    var valorProduto = readLine()?.toDouble() ?: 0.0
 
     println("Porcentagem de desconto: ")
-    var porcentagemDesconto = scanner.nextDouble()
+    var porcentagemDesconto = readLine()?.toDouble() ?: 0.0
 
     var valorFinal = valorProduto - (valorProduto * (porcentagemDesconto / 100))
     println("Valor do produto com $porcentagemDesconto% de desconto: R$$valorFinal")
@@ -23,15 +20,15 @@ fun ex1() {
 
 fun ex2(){
     println("-=-=-=-=-=-=-=-=-=-=-=-=Exercício 2-=-=-=-=-=-=-=-=-=-=-=-=")
-    val scanner = Scanner(System.`in`)
 
     var x: Double = 1.0
     var total: Double = 0.0
 
     while(x != 0.0){
         println("Digite um número para somar com: $total")
-        x = scanner.nextDouble()
+        x = readLine()?.toDouble() ?: 0.0
         total += x
     }
+    println("Total: $total")
     println("=-=-=-=-=-=-=-=-=-=-=Fim do exercício 2-=-=-=-=-=-=-=-=-=-=-")
 }
